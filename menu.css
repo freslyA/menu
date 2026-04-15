@@ -1,0 +1,98 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+/* FONDO IMAGEN PRO */
+.fondo {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://images.unsplash.com/photo-1511512578047-dfb367046420") no-repeat center center/cover;
+  z-index: -3;
+  transform: scale(1.1);
+}
+
+/* CAPA OSCURA */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.6), #000 90%);
+  z-index: -2;
+}
+
+/* CONTENEDOR */
+.menu-container {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* TITULO NEÓN ANIMADO */
+.titulo {
+  font-size: 70px;
+  letter-spacing: 5px;
+
+  background: linear-gradient(90deg, #00f7ff, #00ff88, #00f7ff);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  animation: brillo 5s linear infinite;
+}
+
+/* SUBTITULO */
+.subtitulo {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  color: #aaa;
+  letter-spacing: 3px;
+}
+
+/* BOTONES */
+.btn {
+  display: block;
+  width: 280px;
+  margin: 20px auto;
+  padding: 18px;
+
+  font-size: 22px;
+  letter-spacing: 2px;
+
+  text-decoration: none;
+  color: #00f7ff;
+
+  border: 2px solid #00f7ff;
+  border-radius: 12px;
+
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+
+  box-shadow: 0 0 10px #00f7ff;
+  transition: all 0.3s ease;
+}
+
+/* HOVER PRO */
+.btn:hover {
+  color: black;
+  background: #00f7ff;
+
+  transform: scale(1.1);
+
+  box-shadow:
+    0 0 20px #00f7ff,
+    0 0 40px #00f7ff,
+    0 0 80px #00f7ff;
+}
+
+/* ANIMACION TITULO */
+@keyframes brillo {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
